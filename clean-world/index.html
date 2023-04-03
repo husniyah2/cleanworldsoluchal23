@@ -1,0 +1,52 @@
+<html>
+ <head>
+ <title>Clean World!
+    
+ </title>
+ <script
+ src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js">
+ </script>
+
+ <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+ </head>
+ <body>
+ <script type="module" src="src/main.js"></script>
+ 
+ <label for="email">Submit your questions here:</label>
+ <input type="text" id="email">
+ <button id="send">Send</button>
+ <style>
+    #email {
+      width: 300px;
+      height: 300px;
+      float: right;
+    }
+    
+    #send {
+      float: right;
+    }
+  </style>
+ <script  type="module">
+ var firebaseConfig = {
+    apiKey: "AIzaSyAAdKlBuj8znu6mX6UzyIjo3FlAcATtHZY",
+    authDomain: "solutionchal.firebaseapp.com",
+    projectId: "solutionchal",
+    storageBucket: "solutionchal.appspot.com",
+    messagingSenderId: "583586586589",
+    appId: "1:583586586589:web:ad388a5896bc0bfb116034",
+    measurementId: "G-0ZW7N83ZYE"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var firebaseRef = firebase.database().ref('emails');
+  document.querySelector('#send').addEventListener('click', ()=>{
+    const email = document.geetElementById('email').value;
+    firebaseRef.push(email);
+  });
+  </script>
+
+ </body>
+ </html>
+
