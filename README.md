@@ -1,6 +1,6 @@
 README FILE SET UP
 
-## Save the Environment 
+## Clean World
 
 Welcome to our eco-friendly gaming website! We believe it is critical to care for our planet, and we want to contribute by creating a fun and educational gaming experience that encourages users to reduce waste and be more eco-conscious in their daily lives.
 
